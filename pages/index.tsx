@@ -8,9 +8,9 @@ import HeaderComponent from '../components/Header/HeaderComponent'
 const Home: NextPage = () => {
   return (
     <>
-      <Layout>
+      {/* <Layout>
 
-      </Layout>
+      </Layout> */}
     </>
   )
 }
