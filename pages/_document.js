@@ -1,6 +1,8 @@
 import Document, {  Head, Main, NextScript, Html } from 'next/document';
 // Import styled components ServerStyleSheet
 import { ServerStyleSheet } from 'styled-components';
+//fonts:
+
 
 export default class MyDocument extends Document {
   static getInitialProps({ renderPage }) {
