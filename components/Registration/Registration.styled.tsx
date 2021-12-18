@@ -39,7 +39,7 @@ export const RegistrationDisclaimer = styled.div`
     grid-template-rows: 1fr 4fr; 
     margin-top: 30px;
     width: 70%;
-    height: 80%;
+    height: 85%;
     border-radius: 15px;
     background-color: ${colors.bg};
 
@@ -48,7 +48,7 @@ export const RegistrationDisclaimer = styled.div`
     }
 
     @media only screen and (min-width: 970px) {
-        height: 50%;
+        height: 60%;
     }
 `
 export const DisclaimerHeader = styled.h1`
@@ -56,7 +56,7 @@ export const DisclaimerHeader = styled.h1`
     font-size: 40px;    
     margin: 20px 0px 0px 0px;
     justify-self: center;
-    @media only screen and (min-width: 768px) {
+    @media only screen and (min-width: 970px) {
         font-size: 60px; 
     }
 `
@@ -77,15 +77,17 @@ export const ContentContainer = styled.section`
 `
 export const JoinButton = styled.button`
     font-size: 30px;
+    width: 120px;
+    background-color: ${colors.bg};
+    color: black;
+    border: 2px solid black;
+    border-radius: 0;
+
     padding: 3px 20px;
     margin-top: 30px;
     margin-bottom: 20px;
-    width: 120px;
     justify-self: center;
-    font-family: "";
-    background-color: ${colors.bg};
-    border: 2px solid black;
-    border-radius: 0;
+    
     &&:hover {
         background-color: rgb(221, 221, 221, 0.67);
     }
