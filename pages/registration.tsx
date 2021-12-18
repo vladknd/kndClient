@@ -13,16 +13,17 @@ import {
     ContentContainer,
     DisclaimerHeader,
     DisclaimerText,
-    JoinButton
+    JoinButton,
+    Logo
 } from "../components/Registration/Registration.styled"
 //-------------------IMAGES:
 // import Knd from "../public/KND.svg"
 
 const Registration = () => {
     return (
-        <MainContainer>
+        <>
         <Section1>
-            <img src="./KND.svg" alt="" height={520}/>
+            <Logo src="./KND.svg" alt="knd"/>
             <NextLink href="#section2">
                 <AiOutlineDownCircle
                     size={70}
@@ -52,7 +53,7 @@ const Registration = () => {
                     <JoinButton>JOIN</JoinButton>
             </RegistrationDisclaimer>
         </Section2>
-        </MainContainer>        
+        </>        
     )
 }
 
