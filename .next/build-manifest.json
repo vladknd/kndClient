@@ -29,6 +29,11 @@
       "static/chunks/webpack.js",
       "static/chunks/main.js",
       "static/chunks/pages/registration.js"
+    ],
+    "/welcome": [
+      "static/chunks/webpack.js",
+      "static/chunks/main.js",
+      "static/chunks/pages/welcome.js"
     ]
   },
   "ampFirstPages": []

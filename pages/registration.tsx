@@ -1,60 +1,88 @@
 //#------------------GLOBAL-IMPORTS------------------#
+import { useState } from 'react'
 import { NextPage } from 'next'
 import NextLink from 'next/link'
 //-------------------ICONS:
 import { AiOutlineDownCircle } from 'react-icons/ai'
+//-------------------MUI:
+import TextField from '@mui/material/TextField'
+import { alpha, styled } from '@mui/material/styles'
 //#------------------LOCAL-IMPORTS------------------#
 //-------------------STYLED-COMPONENTS:
 import { 
     MainContainer,
-    Section1,
-    Section2,
-    RegistrationDisclaimer,
-    ContentContainer,
-    DisclaimerHeader,
-    DisclaimerText,
-    JoinButton,
-    Logo
-} from "../components/Registration/Registration.styled"
+    Container,
+    Header, 
+    HeaderContainer,
+    Divider,
+    FormContainer,
+    SignButton
+} from '../components/Registration/Registration.styled'
 //-------------------IMAGES:
 // import Knd from "../public/KND.svg"
+const Input = styled(TextField)({
+    '& input:valid + fieldset': {
+        borderColor: 'black',
+        borderWidth: 2,
+    },
+    color: 'black',
+    margin: '20px',
+    height: "30px"
+})
 
-const Registration = () => {
+const Welcome = () => {
+    const [welcome, setWelcome] =  useState(true)
+
     return (
-        <>
-        <Section1>
-            <Logo src="./KND.svg" alt="knd"/>
-            <NextLink href="#section2">
-                <AiOutlineDownCircle
-                    size={70}
-                    // color="white"
-                    style={{
-                        marginTop: "80px",
-                        // color: "white"
-                    }}
-                />
-            </NextLink>
-            
-        </Section1>
-
-        <Section2 id="section2">
-            <RegistrationDisclaimer>
-                    <DisclaimerHeader>
-                        Congratulations
-                    </DisclaimerHeader>
-                    <DisclaimerText>
-                        You have been granted an exclusive chance 
-                        to join a secret community. You were chosen amongst many to be 
-                        a part of group of highly talented individuals. In the community 
-                        we support our members in various directions, helping them to find 
-                        new opportunities, evolve and participate in unique events. <br/>In our society
-                        you will grow and prosper 🖖🏼
-                    </DisclaimerText>
-                    <JoinButton>JOIN</JoinButton>
-            </RegistrationDisclaimer>
-        </Section2>
-        </>        
+        <MainContainer>
+            <Container>
+                <HeaderContainer>
+                    <Divider/>
+                        <Header>
+                            Registration
+                        </Header>
+                    <Divider/>
+                    
+                    
+                </HeaderContainer>
+                <FormContainer>
+                        <Input
+                            id="firstName" 
+                            label="First name" 
+                            variant="standard" 
+                            color="primary"
+                        />
+                        <Input
+                            id="lastName" 
+                            label="Last name" 
+                            variant="standard" 
+                            color="primary"
+                        />
+                        <Input
+                            id="username" 
+                            label="Username" 
+                            variant="standard" 
+                            color="primary"
+                        />
+                        <Input
+                            id="email" 
+                            label="Email" 
+                            variant="standard" 
+                            color="primary"
+                        />
+                        <Input
+                            id="password" 
+                            label="Password" 
+                            variant="standard" 
+                            color="primary"
+                            type="password"
+                        />
+                        
+                    </FormContainer>
+                    <SignButton>SIGN UP</SignButton>
+            </Container>
+        </MainContainer>
     )
 }
 
-export default Registration
+export default Welcome
